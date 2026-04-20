@@ -5,28 +5,48 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Omri Wolk | Portfolio</title>
     <meta name="description" content="Personal portfolio homepage for a prospective employer.">
+    <link rel="stylesheet" href="../main.css">
+    <link rel="manifest" href="/manifest.json">
+    <meta name="theme-color" content="#2c3e50">
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-capable" content="yes">		
 </head>
 <body>
 
-        <!-- Introductory section for employers -->
-		
+	<main>
+	
+	<nav>
 		<a href="../index.html">Home</a>
+	</nav>
+	
+	<script>
+	     if ("serviceWorker" in navigator) {
+	     navigator.serviceWorker.register("/service-worker.js")
+	    .then(() => console.log("Service Worker registered"))
+	    .catch(err => console.log("SW registration failed:", err));
+	     }
+     	</script>
 
         <section>
             <h2>About Me</h2>
 
             <figure>
-                <img src="Profile_picture_edited.jpg" alt="Portrait of Omri Wolk">
+                <img src="Profile_picture_edited.jpg" alt="Portrait of Omri Wolk" class="profile-img">
                 <figcaption>Profile image.</figcaption>
             </figure>
 
-           <p>	</p>
-			<p>Hello, my name is Omri Wolk</p> 
-			<p>	</p>
-			<p>I am a pharmacist and an aspiring data scientist a strong interest in computer aided drug discovery (CADD).</p>
-			<p>	</p>
-			<p>I am developing my skills in Pytorch, and AI principles so that I can create predictive models to seperate the drug wheat from the molecular chaff.</p>
-			<p>	</p>
+		<p>Hello, my name is Omri Wolk.</p>
+
+		<p>
+		I am a pharmacist and an aspiring data scientist with a strong interest in 
+		computer-aided drug discovery (CADD).
+		</p>
+
+		<p>
+		I am developing my skills in PyTorch and AI principles to create predictive 
+		models that find the drug "niddles" in the molecular "haystack".
+		</p>
+		
         </section>
 
         <!-- Developer comment example:
@@ -40,7 +60,7 @@
 				<img src="CADD.jpg" alt=" ...">                
 				<figcaption>CADD - image from: J. Bajorath,  "Computer-aided drug  discovery" F1000Research, vol. 4, pp. 630, 2015, doi: 10.12688/f1000research.6653.1.</figcaption>
                 <p>
-                    I am an enthusiastic learner who takes pride in the quality of my work. I am maticulos on biological, chemical and computational aspects of CADD, and so I get results.
+                    I am an enthusiastic learner who takes pride in the quality of my work. I am meticulos on biological, chemical and computational aspects of CADD, and so I get results.
                 </p>
                 <p>
                     I work well independently, but I am also comfortable collaborating with others. I value communication, patience, and persistence.
@@ -49,17 +69,17 @@
                 <h2>Career Goals</h2>
                 <img src="images/career-goals.jpg" alt="Notebook and laptop on a work desk">
                 <p>
-                    My goal is to develop the various computaitional tools that would put affordable drugs into patients
+                    My goal is to develop the various computational tools that would put affordable drugs into patient's hands
                 </p>
         </section>
 
         <section>
             <h2>Contact Details</h2>
-			<img src="contact.png" alt="Contact">
+			<img src="contact.png" alt="Contact" class="profile-img">
             <address>
                 <p>Email: <a href="mailto:omriwolk@gmail.com">omriwolk@gmail.com</a></p>
-                <p><p>WhatsApp: <a href="https://wa.me/972544777163" target="_blank" rel="noopener noreferrer">+972 54 477 7163</a></p>
-				<p>LinkedIn: <a href="https://www.linkedin.com/in/omri-wolk-237b012a1" target="_blank">linkedin.com/in/omri-wolk</a></p>
+                <p>WhatsApp: <a href="https://wa.me/972544777163" target="_blank" rel="noopener noreferrer">+972 54 477 7163</a></p>
+		<p>LinkedIn: <a href="https://www.linkedin.com/in/omri-wolk-237b012a1" target="_blank">linkedin.com/in/omri-wolk</a></p>
                 <p>Location: Hanoi, Vietnam</p>
             </address>
         </section>

@@ -1,4 +1,52 @@
-This is page 2
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="#2c3e50">
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <title>CSS Demo</title>
 
-<a href="index.html">Skills</a>
+    <link rel="stylesheet" href="../../main.css">
+    <link rel="stylesheet" href="page2.css">
+</head>
+<body>
 
+     <script>
+	     if ("serviceWorker" in navigator) {
+	     navigator.serviceWorker.register("/service-worker.js")
+	    .then(() => console.log("Service Worker registered"))
+	    .catch(err => console.log("SW registration failed:", err));
+	     }
+     </script>
+
+	
+     <nav>
+	<a href="./index.html">Skills</a>
+    </nav>
+
+    <header>
+        <h1>CSS Demonstration</h1>
+    </header>
+
+    <main class="container">
+        <section class="card">
+            <h2>Section One</h2>
+            <p>This is the same HTML content.</p>
+        </section>
+
+        <section class="card">
+            <h2>Section Two</h2>
+            <p>Only CSS changes how this looks.</p>
+        </section>
+
+        <section class="card">
+            <h2>Section Three</h2>
+            <p>Different layouts, colors, and animations.</p>
+        </section>
+
+    </main>
+
+</body>
+</html>

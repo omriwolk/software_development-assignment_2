@@ -1,23 +1,37 @@
-<a href="../index.html">Home</a>
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Skills</title>
-    <link rel="stylesheet" href="skills.css">
+    <link rel="stylesheet" href="../main.css">
+    <link rel="manifest" href="/manifest.json">
+    <meta name="theme-color" content="#2c3e50">
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-capable" content="yes">
 </head>
 <body>
    
     <!-- Main Content -->
     <main>
+    
+         <script>
+	     if ("serviceWorker" in navigator) {
+	     navigator.serviceWorker.register("/service-worker.js")
+	    .then(() => console.log("Service Worker registered"))
+	    .catch(err => console.log("SW registration failed:", err));
+	     }
+     	</script>
+    
+	<nav>
+		<a href="../index.html">Home</a>
+	</nav>
 
         <section>
             <h2>I Have a Very Particular Set of Skills</h2>
             <p>
                 CSS (Cascading Style Sheets) controls the appearance and layout of web pages. 
-                Developers use it to separate between content and design, in order to simplefy websites maintanense. 
+                Developers use it to separate between content and design, in order to simplify websites maintanense. 
             </p>
             <p>
                 Below I demonstrate how CSS applies different styles to the same HTML page.  
@@ -28,10 +42,9 @@
         <!-- Example 1 -->
         <section>
             <h2>Example 1: Responsive Layout</h2>
-            <img src="images/layout.jpg" alt="Responsive layout example">
             <p>
                 This example demonstrates how CSS creates a responsive layout. 
-				The layout can adapt to different screen sizes, ensuring proper appearnce for both mobile and desktop devices.
+		The layout can adapt to different screen sizes, ensuring proper appearnce for both mobile and desktop devices.
             </p>
             <a href="page_1.html">View Example</a>
         </section>
@@ -39,7 +52,6 @@
         <!-- Example 2 -->
         <section>
             <h2>Example 2: Visual Styling</h2>
-            <img src="images/styling.jpg" alt="Visual styling example">
             <p>
                 This example shows how CSS changes the webpage appearance by applying different 
 				colors, fonts, spacing, and positioning.
@@ -50,7 +62,6 @@
         <!-- Example 3 -->
         <section>
             <h2>Example 3: Animation and Interaction</h2>
-            <img src="images/animation.jpg" alt="Animation example">
             <p>
                 This example demonstrates how CSS animations and transitions enhance interactivity. 
                 Animations capture user attention to the desired page or section.

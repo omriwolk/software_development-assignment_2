@@ -1,56 +1,81 @@
-<a href="../index.html">Home</a>
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Qualifications</title>
+    <link rel="stylesheet" href="../main.css">
+    <link rel="manifest" href="/manifest.json">
+    <meta name="theme-color" content="#2c3e50">
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-capable" content="yes">
 </head>
 <body>
 
-    <h1>Qualifications</h1>
+     <script>
+	     if ("serviceWorker" in navigator) {
+	     navigator.serviceWorker.register("/service-worker.js")
+	    .then(() => console.log("Service Worker registered"))
+	    .catch(err => console.log("SW registration failed:", err));
+	     }
+     </script>
 
-    <table border="1">
-        <thead>
-            <tr>
-                <th>Degree</th>
-                <th>Major</th>
-                <th>Institution</th>
-                <th>Years</th>
-            </tr>
-        </thead>
-        <tbody>
-            <tr>
-                <td>B.Pharm</td>
-                <td>Pharmacy</td>
-                <td>Ben-Gurion University of the Negev</td>
-                <td>2007 - 2011</td>
-            </tr>
-            <tr>
-                <td>MSc</td>
-                <td>Pharmacology</td>
-                <td>Ben-Gurion University of the Negev</td>
-                <td>2012 - 2014</td>
-            </tr>
-            <tr>
-                <td>PhD</td>
-                <td>Computational Chemistry</td>
-                <td>The Hebrew University of Jerusalem</td>
-                <td>2016 - 2023</td>
-            </tr>
-            <tr>
-                <td>BSc</td>
-                <td>Computer Science</td>
-                <td>British University of Vietnam</td>
-                <td>2026 - Present</td>
-            </tr>
-        </tbody>
-        <tfoot>
-            <tr>
-                <td colspan="4">Total Degrees Listed: 4</td>
-            </tr>
-        </tfoot>
-    </table>
+<nav>
+  <a href="../index.html">Home</a>
+</nav>
+
+<main>
+
+<h1>Qualifications</h1>
+
+<table class="qual-table">
+    <thead>
+        <tr>
+            <th>Degree</th>
+            <th>Major</th>
+            <th>Institution</th>
+            <th>Years</th>
+        </tr>
+    </thead>
+
+    <tbody>
+        <tr>
+            <td>B.Pharm</td>
+            <td>Pharmacy</td>
+            <td>Ben-Gurion University of the Negev</td>
+            <td>2007 - 2011</td>
+        </tr>
+
+        <tr>
+            <td>MSc</td>
+            <td>Pharmacology</td>
+            <td>Ben-Gurion University of the Negev</td>
+            <td>2012 - 2014</td>
+        </tr>
+
+        <tr>
+            <td>PhD</td>
+            <td>Computational Chemistry</td>
+            <td>The Hebrew University of Jerusalem</td>
+            <td>2016 - 2023</td>
+        </tr>
+
+        <tr>
+            <td>BSc</td>
+            <td>Computer Science</td>
+            <td>British University of Vietnam</td>
+            <td>2026 - Present</td>
+        </tr>
+    </tbody>
+
+    <tfoot>
+        <tr>
+            <td colspan="4">Total Degrees Listed: 4</td>
+        </tr>
+    </tfoot>
+</table>
+
+</main>
 
 </body>
 </html>

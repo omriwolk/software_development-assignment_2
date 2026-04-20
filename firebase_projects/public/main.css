@@ -1,0 +1,97 @@
+/* Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Base */
+body {
+  font-family: Arial, sans-serif;
+  background: #f4f6f8;
+  color: #333;
+  line-height: 1.6;
+}
+
+/* Layout */
+main {
+  max-width: 1000px;
+  margin: auto;
+  padding: 20px;
+}
+
+/* Navigation */
+nav {
+  background: #222;
+  padding: 10px;
+  text-align: center;
+}
+
+nav a {
+  color: white;
+  margin: 0 15px;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+nav a:hover {
+  text-decoration: underline;
+}
+
+/* Sections */
+section {
+  background: white;
+  margin: 20px 0;
+  padding: 20px;
+  border-radius: 8px;
+}
+
+/* Images */
+img {
+  max-width: 100%;
+  border-radius: 6px;
+}
+
+.profile-img {
+  width: 180px;      /* controls size */
+  height: auto;      /* keeps original ratio */
+  display: block;
+  margin: 15px 0;
+}
+
+/* Tables */
+.qual-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 20px;
+  background: white;
+}
+
+.qual-table th,
+.qual-table td {
+  border: 1px solid #ccc;
+  padding: 12px;
+  text-align: left;
+}
+
+.qual-table th {
+  background: #2c3e50;
+  color: white;
+}
+
+.qual-table tr:nth-child(even) {
+  background: #f4f4f4;
+}
+
+.qual-table tr:hover {
+  background: #e0f0ff;
+}
+
+/* Footer */
+footer {
+  text-align: center;
+  padding: 15px;
+  background: #222;
+  color: white;
+  margin-top: 20px;
+}

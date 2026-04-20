@@ -1,0 +1,52 @@
+/* page2.css - Styling + Animation Demo */
+
+/* Change overall look dramatically */
+body {
+  background: linear-gradient(135deg, #ff7e5f, #feb47b);
+  font-family: "Courier New", monospace;
+}
+
+/* Center content instead of grid */
+.container {
+  max-width: 700px;
+  margin: 40px auto;
+}
+
+/* Card design */
+.card {
+  background: white;
+  margin: 20px 0;
+  padding: 25px;
+  border-left: 6px solid #ff7e5f;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+
+  /* animation */
+  animation: fadeInUp 0.8s ease forwards;
+}
+
+/* Hover interaction */
+.card:hover {
+  transform: scale(1.05);
+  transition: transform 0.3s ease;
+}
+
+/* Add slight delay for each card */
+.card:nth-child(2) {
+  animation-delay: 0.2s;
+}
+
+.card:nth-child(3) {
+  animation-delay: 0.4s;
+}
+
+/* Animation keyframes */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
