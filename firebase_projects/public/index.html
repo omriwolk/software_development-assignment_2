@@ -1,32 +1,70 @@
 <!DOCTYPE html>
+<!-- Declares this document as HTML5 -->
+
 <html lang="en">
+<!-- Sets language to English for accessibility and SEO -->
+
 <head>
   <meta charset="UTF-8">
+  <!-- Supports all characters (important for global compatibility) -->
+
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- Makes layout responsive on mobile devices -->
 
   <title>Omri Wolk | Portfolio</title>
+  <!-- Title shown in browser tab -->
 
   <link rel="stylesheet" href="/main.css">
+  <!-- Links global CSS stylesheet (controls design of entire site) -->
+
   <link rel="manifest" href="/manifest.json">
+  <!-- Links PWA manifest (required for installability) -->
+
   <meta name="theme-color" content="#2c3e50">
+  <!-- Sets browser UI color on mobile (PWA branding) -->
 </head>
 
 <body>
 
 <nav>
+  <!-- Navigation menu for site-wide page switching -->
+
   <a href="./about/">About</a>
+  <!-- Link to About page -->
+
   <a href="./qualifications/">Qualifications</a>
+  <!-- Link to Qualifications page -->
+
   <a href="./skills/">Skills</a>
+  <!-- Link to Skills page -->
 </nav>
 
 <main>
+  <!-- Main content of homepage -->
+
   <h1>Omri Wolk Portfolio</h1>
+  <!-- Main heading (SEO + accessibility importance) -->
+
   <p>Pharmacist | Data Scientist | CADD Researcher</p>
+  <!-- Short professional summary -->
+
+  <figure>
+    <!-- Semantic container for image + caption -->
+
+    <img src="./about/Profile_picture_edited.jpg" alt="Portrait of Omri Wolk">
+    <!-- Profile image (relative path from root) -->
+
+    <figcaption>Profile image.</figcaption>
+    <!-- Description of image for accessibility -->
+  </figure>
 </main>
 
 <script>
 if ("serviceWorker" in navigator) {
+  // Checks if browser supports service workers (PWA feature)
+
   navigator.serviceWorker.register("/service-worker.js");
+  // Registers service worker for offline caching + installability
 }
 </script>
 

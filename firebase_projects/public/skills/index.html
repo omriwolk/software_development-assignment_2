@@ -1,82 +1,127 @@
 <!DOCTYPE html>
+<!-- Declares HTML5 document type -->
+
 <html lang="en">
+<!-- Sets language for accessibility and search engines -->
+
 <head>
     <meta charset="UTF-8">
+    <!-- Enables full Unicode character support -->
+
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Makes page responsive on mobile devices -->
+
     <title>Skills</title>
+    <!-- Browser tab title -->
+
     <link rel="stylesheet" href="../main.css">
+    <!-- Links global stylesheet -->
+
     <link rel="manifest" href="/manifest.json">
+    <!-- Links PWA manifest file -->
+
     <meta name="theme-color" content="#2c3e50">
+    <!-- Sets mobile browser theme color -->
+
     <meta name="mobile-web-app-capable" content="yes">
+    <!-- Enables full-screen PWA mode on mobile -->
+
     <meta name="apple-mobile-web-app-capable" content="yes">
+    <!-- Enables iOS PWA behavior -->
 </head>
+
 <body>
-   
-    <!-- Main Content -->
-    <main>
-    
-         <script>
-	     if ("serviceWorker" in navigator) {
-	     navigator.serviceWorker.register("/service-worker.js")
-	    .then(() => console.log("Service Worker registered"))
-	    .catch(err => console.log("SW registration failed:", err));
-	     }
-     	</script>
-    
-	<nav>
-		<a href="../index.html">Home</a>
-	</nav>
 
-        <section>
-            <h2>I Have a Very Particular Set of Skills</h2>
-            <p>
-                CSS (Cascading Style Sheets) controls the appearance and layout of web pages. 
-                Developers use it to separate between content and design, in order to simplify websites maintanense. 
-            </p>
-            <p>
-                Below I demonstrate how CSS applies different styles to the same HTML page.  
-                I chose examples for responsive design, layout techniques, and animations.
-            </p>
-        </section>
+<main>
+<!-- Main content wrapper -->
 
-        <!-- Example 1 -->
-        <section>
-            <h2>Example 1: Responsive Layout</h2>
-            <p>
-                This example demonstrates how CSS creates a responsive layout. 
-		The layout can adapt to different screen sizes, ensuring proper appearnce for both mobile and desktop devices.
-            </p>
-            <a href="page_1.html">View Example</a>
-        </section>
+<script>
+    // Checks if service workers are supported (required for PWA)
+    if ("serviceWorker" in navigator) {
 
-        <!-- Example 2 -->
-        <section>
-            <h2>Example 2: Visual Styling</h2>
-            <p>
-                This example shows how CSS changes the webpage appearance by applying different 
-				colors, fonts, spacing, and positioning.
-            </p>
-            <a href="page_2.html">View Example</a>
-        </section>
+        // Registers service worker for caching/offline functionality
+        navigator.serviceWorker.register("/service-worker.js")
 
-        <!-- Example 3 -->
-        <section>
-            <h2>Example 3: Animation and Interaction</h2>
-            <p>
-                This example demonstrates how CSS animations and transitions enhance interactivity. 
-                Animations capture user attention to the desired page or section.
-            </p>
-            <a href="page_1.html">View Example</a>
-        </section>
+        // Logs success to console
+        .then(() => console.log("Service Worker registered"))
 
-    </main>
+        // Logs error if registration fails
+        .catch(err => console.log("SW registration failed:", err));
+    }
+</script>
 
-    <!-- Footer -->
-    <footer>
-        <p>
-            Omri Wolk © 2026 All rights reserved
-        </p>
-    </footer>
+<nav>
+    <!-- Navigation section -->
+
+    <a href="../index.html">Home</a>
+    <!-- Link back to homepage -->
+</nav>
+
+<section>
+    <!-- Intro section describing skills page -->
+
+    <h2>I Have a Very Particular Set of Skills</h2>
+    <!-- Main heading -->
+
+    <p>
+        CSS (Cascading Style Sheets) controls the appearance and layout of web pages. 
+        Developers use it to separate content from design, simplifying maintenance.
+    </p>
+
+    <p>
+        Below I demonstrate how CSS applies different styles to the same HTML page.  
+        Examples include responsive design, layout techniques, and animations.
+    </p>
+</section>
+
+<section>
+    <!-- Example 1 section -->
+
+    <h2>Example 1: Responsive Layout</h2>
+
+    <p>
+        This example demonstrates how CSS creates a responsive layout. 
+        The layout adapts to different screen sizes for mobile and desktop devices.
+    </p>
+
+    <a href="page_1.html">View Example</a>
+    <!-- Link to demo page -->
+</section>
+
+<section>
+    <!-- Example 2 section -->
+
+    <h2>Example 2: Visual Styling</h2>
+
+    <p>
+        This example shows how CSS changes appearance using colors, fonts, spacing, and positioning.
+    </p>
+
+    <a href="page_2.html">View Example</a>
+</section>
+
+<section>
+    <!-- Example 3 section -->
+
+    <h2>Example 3: Animation and Interaction</h2>
+
+    <p>
+        This example demonstrates how CSS animations and transitions improve user interaction and engagement.
+    </p>
+
+    <a href="page_1.html">View Example</a>
+</section>
+
+</main>
+
+<footer>
+    <!-- Footer section -->
+
+    <p>
+        Omri Wolk © 2026 All rights reserved
+    </p>
+    <!-- Copyright notice -->
+</footer>
 
 </body>
 </html>

@@ -1,35 +1,71 @@
 <!DOCTYPE html>
+<!-- Declares HTML5 document type -->
+
 <html lang="en">
+<!-- Sets language to English for accessibility and SEO -->
+
 <head>
     <meta charset="UTF-8">
+    <!-- Enables full character encoding support -->
+
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Ensures responsive layout on mobile devices -->
+
     <title>Qualifications</title>
+    <!-- Browser tab title -->
+
     <link rel="stylesheet" href="../main.css">
+    <!-- Links global CSS stylesheet -->
+
     <link rel="manifest" href="/manifest.json">
+    <!-- Links PWA manifest file -->
+
     <meta name="theme-color" content="#2c3e50">
+    <!-- Sets browser theme color for mobile UI -->
+
     <meta name="mobile-web-app-capable" content="yes">
+    <!-- Enables app-like full-screen mode on mobile -->
+
     <meta name="apple-mobile-web-app-capable" content="yes">
+    <!-- Enables PWA behavior on iOS Safari -->
 </head>
+
 <body>
 
-     <script>
-	     if ("serviceWorker" in navigator) {
-	     navigator.serviceWorker.register("/service-worker.js")
-	    .then(() => console.log("Service Worker registered"))
-	    .catch(err => console.log("SW registration failed:", err));
-	     }
-     </script>
+<script>
+    // Checks if browser supports service workers (required for PWA)
+    if ("serviceWorker" in navigator) {
+
+        // Registers service worker for caching/offline support
+        navigator.serviceWorker.register("/service-worker.js")
+
+        // Logs success message in browser console
+        .then(() => console.log("Service Worker registered"))
+
+        // Logs error if registration fails
+        .catch(err => console.log("SW registration failed:", err));
+    }
+</script>
 
 <nav>
-  <a href="../index.html">Home</a>
+    <!-- Navigation section -->
+
+    <a href="../index.html">Home</a>
+    <!-- Link back to homepage -->
 </nav>
 
 <main>
+<!-- Main content wrapper -->
 
 <h1>Qualifications</h1>
+<!-- Page heading -->
 
 <table class="qual-table">
+<!-- Styled table for qualifications -->
+
     <thead>
+        <!-- Table header section -->
+
         <tr>
             <th>Degree</th>
             <th>Major</th>
@@ -39,6 +75,8 @@
     </thead>
 
     <tbody>
+        <!-- Main table content -->
+
         <tr>
             <td>B.Pharm</td>
             <td>Pharmacy</td>
@@ -69,10 +107,14 @@
     </tbody>
 
     <tfoot>
+        <!-- Table footer summary -->
+
         <tr>
             <td colspan="4">Total Degrees Listed: 4</td>
+            <!-- Spans across all columns -->
         </tr>
     </tfoot>
+
 </table>
 
 </main>

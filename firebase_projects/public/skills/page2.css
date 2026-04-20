@@ -1,16 +1,18 @@
-/* page2.css - Styling + Animation Demo */
+
+/* page2.css - Styling Demo (No Animation Version) */
+/* Demonstrates strong visual redesign without motion effects */
 
 /* Change overall look dramatically */
 body {
   background: linear-gradient(135deg, #ff7e5f, #feb47b);
   font-family: "Courier New", monospace;
-}
+} /* Applies gradient background and monospace font for distinct visual style */
 
 /* Center content instead of grid */
 .container {
   max-width: 700px;
   margin: 40px auto;
-}
+} /* Limits width and centers content for focused reading layout */
 
 /* Card design */
 .card {
@@ -19,34 +21,16 @@ body {
   padding: 25px;
   border-left: 6px solid #ff7e5f;
   box-shadow: 0 5px 15px rgba(0,0,0,0.2);
-
-  /* animation */
-  animation: fadeInUp 0.8s ease forwards;
-}
+} /* Creates clean card design with shadow and accent border */
 
 /* Hover interaction */
 .card:hover {
   transform: scale(1.05);
   transition: transform 0.3s ease;
-}
+} /* Adds subtle zoom effect on hover for interactivity */
 
-/* Add slight delay for each card */
-.card:nth-child(2) {
-  animation-delay: 0.2s;
-}
+/* Add slight delay for each card (REMOVED animation, so removed delays too) */
+/* .card:nth-child(2) removed */
+/* .card:nth-child(3) removed */
 
-.card:nth-child(3) {
-  animation-delay: 0.4s;
-}
 
-/* Animation keyframes */
-@keyframes fadeInUp {
-  from {
-    opacity: 0;
-    transform: translateY(30px);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}

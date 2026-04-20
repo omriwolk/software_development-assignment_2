@@ -1,51 +1,94 @@
 <!DOCTYPE html>
+<!-- Declares HTML5 document type -->
+
 <html lang="en">
+<!-- Sets document language for accessibility and SEO -->
+
 <head>
     <meta charset="UTF-8">
+    <!-- Enables full character encoding support -->
+
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Makes page responsive on mobile devices -->
+
     <meta name="theme-color" content="#2c3e50">
+    <!-- Sets browser theme color (used in mobile PWA UI) -->
+
     <meta name="mobile-web-app-capable" content="yes">
+    <!-- Enables full-screen app-like mode on Android -->
+
     <meta name="apple-mobile-web-app-capable" content="yes">
+    <!-- Enables PWA full-screen mode on iOS -->
+
     <title>CSS Demo</title>
-    
+    <!-- Browser tab title -->
+
     <link rel="stylesheet" href="../../main.css">
+    <!-- Links global stylesheet (shared across site) -->
+
     <link rel="stylesheet" href="page1.css">
+    <!-- Links page-specific CSS for unique styling -->
 </head>
+
 <body>
 
-     <script>
-	     if ("serviceWorker" in navigator) {
-	     navigator.serviceWorker.register("/service-worker.js")
-	    .then(() => console.log("Service Worker registered"))
-	    .catch(err => console.log("SW registration failed:", err));
-	     }
-     </script>
+<script>
+    // Checks if browser supports service workers (PWA requirement)
+    if ("serviceWorker" in navigator) {
 
-     <nav>
-	<a href="./index.html">Skills</a>
-    </nav>
+        // Registers service worker for offline caching
+        navigator.serviceWorker.register("/service-worker.js")
 
-    <header>
-        <h1>CSS Demonstration</h1>
-    </header>
+        // Logs success message
+        .then(() => console.log("Service Worker registered"))
 
-    <main class="container">
-        <section class="card">
-            <h2>Section One</h2>
-            <p>This is the same HTML content.</p>
-        </section>
+        // Logs error if registration fails
+        .catch(err => console.log("SW registration failed:", err));
+    }
+</script>
 
-        <section class="card">
-            <h2>Section Two</h2>
-            <p>Only CSS changes how this looks.</p>
-        </section>
+<nav>
+    <!-- Navigation menu -->
 
-        <section class="card">
-            <h2>Section Three</h2>
-            <p>Different layouts, colors, and animations.</p>
-        </section>
+    <a href="./index.html">Skills</a>
+    <!-- Link back to Skills page -->
+</nav>
 
-    </main>
+<header>
+    <!-- Page header section -->
+
+    <h1>CSS Demonstration</h1>
+    <!-- Main title of demo page -->
+</header>
+
+<main class="container">
+<!-- Main layout container (styled via CSS Grid/Flexbox) -->
+
+    <section class="card">
+        <!-- First styled content card -->
+
+        <h2>Section One</h2>
+        <!-- Section title -->
+
+        <p>This is the same HTML content.</p>
+        <!-- Content affected by CSS styling -->
+    </section>
+
+    <section class="card">
+        <!-- Second card -->
+
+        <h2>Section Two</h2>
+        <p>Only CSS changes how this looks.</p>
+    </section>
+
+    <section class="card">
+        <!-- Third card -->
+
+        <h2>Section Three</h2>
+        <p>Different layouts, colors, and animations.</p>
+    </section>
+
+</main>
 
 </body>
 </html>

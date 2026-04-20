@@ -1,9 +1,10 @@
+
 /* Reset */
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-}
+} /* Removes default browser spacing and standardizes box model */
 
 /* Base */
 body {
@@ -11,32 +12,32 @@ body {
   background: #f4f6f8;
   color: #333;
   line-height: 1.6;
-}
+} /* Sets global typography, background color, and readability */
 
 /* Layout */
 main {
   max-width: 1000px;
   margin: auto;
   padding: 20px;
-}
+} /* Centers content and limits width for readability */
 
 /* Navigation */
 nav {
   background: #222;
   padding: 10px;
   text-align: center;
-}
+} /* Creates dark navigation bar with centered links */
 
 nav a {
   color: white;
   margin: 0 15px;
   text-decoration: none;
   font-weight: bold;
-}
+} /* Styles navigation links (spacing, color, emphasis) */
 
 nav a:hover {
   text-decoration: underline;
-}
+} /* Adds hover feedback for better UX */
 
 /* Sections */
 section {
@@ -44,20 +45,20 @@ section {
   margin: 20px 0;
   padding: 20px;
   border-radius: 8px;
-}
+} /* Creates card-like layout for content blocks */
 
 /* Images */
 img {
   max-width: 100%;
   border-radius: 6px;
-}
+} /* Makes images responsive and slightly rounded */
 
 .profile-img {
-  width: 180px;      /* controls size */
-  height: auto;      /* keeps original ratio */
+  width: 180px;
+  height: auto;
   display: block;
   margin: 15px 0;
-}
+} /* Controls profile image size and keeps aspect ratio */
 
 /* Tables */
 .qual-table {
@@ -65,27 +66,27 @@ img {
   border-collapse: collapse;
   margin-top: 20px;
   background: white;
-}
+} /* Full-width clean table layout */
 
 .qual-table th,
 .qual-table td {
   border: 1px solid #ccc;
   padding: 12px;
   text-align: left;
-}
+} /* Defines table cell borders and spacing */
 
 .qual-table th {
   background: #2c3e50;
   color: white;
-}
+} /* Styles table header for contrast */
 
 .qual-table tr:nth-child(even) {
   background: #f4f4f4;
-}
+} /* Alternating row colors for readability */
 
 .qual-table tr:hover {
   background: #e0f0ff;
-}
+} /* Hover highlight for interactivity */
 
 /* Footer */
 footer {
@@ -94,4 +95,4 @@ footer {
   background: #222;
   color: white;
   margin-top: 20px;
-}
+} /* Footer styling with contrast and spacing */

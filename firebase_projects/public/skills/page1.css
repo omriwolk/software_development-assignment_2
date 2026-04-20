@@ -1,11 +1,13 @@
+
 /* page1.css - Responsive Layout Demo */
+/* Demonstrates grid layout, responsiveness, and animation */
 
 /* Use grid layout */
 .container {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 20px;
-}
+} /* Creates a 3-column grid layout with spacing between items */
 
 /* Section cards */
 .card {
@@ -15,22 +17,24 @@
   text-align: center;
   border-radius: 8px;
   font-size: 18px;
-}
+} /* Styles card appearance: blue background, centered text, spacing, rounded corners */
 
+/* Animation applied to cards */
 .card {
   animation: fadeIn 0.8s ease-in;
-}
+} /* Applies fade-in animation when elements load */
 
 /* simple keyframe animation */
 @keyframes fadeIn {
   from {
     opacity: 0;
     transform: translateY(20px);
-  }
+  } /* Start state: invisible and slightly shifted down */
+
   to {
     opacity: 1;
     transform: translateY(0);
-  }
+  } /* End state: fully visible and in correct position */
 }
 
 /* Make layout responsive */
@@ -38,19 +42,19 @@
   .container {
     grid-template-columns: repeat(2, 1fr);
   }
-}
+} /* Switches to 2-column layout on tablets and medium screens */
 
 @media (max-width: 600px) {
   .container {
     grid-template-columns: 1fr;
   }
-}
+} /* Switches to single-column layout on mobile devices */
 
 /* Optional visual clarity */
 .card:nth-child(2) {
   background: #2ecc71;
-}
+} /* Changes second card color to green for visual distinction */
 
 .card:nth-child(3) {
   background: #e67e22;
-}
+} /* Changes third card color to orange for contrast */

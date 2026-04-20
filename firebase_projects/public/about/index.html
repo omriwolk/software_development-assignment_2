@@ -1,93 +1,179 @@
 <!DOCTYPE html>
+<!-- Declares HTML5 document type -->
+
 <html lang="en">
+<!-- Sets language to English for accessibility and SEO -->
+
 <head>
     <meta charset="UTF-8">
+    <!-- Enables support for all characters -->
+
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Makes page responsive on mobile devices -->
+
     <title>Omri Wolk | Portfolio</title>
+    <!-- Browser tab title -->
+
     <meta name="description" content="Personal portfolio homepage for a prospective employer.">
+    <!-- SEO description for search engines -->
+
     <link rel="stylesheet" href="../main.css">
+    <!-- Links global stylesheet -->
+
     <link rel="manifest" href="/manifest.json">
+    <!-- Links PWA manifest file -->
+
     <meta name="theme-color" content="#2c3e50">
+    <!-- Sets mobile browser theme color -->
+
     <meta name="mobile-web-app-capable" content="yes">
-    <meta name="apple-mobile-web-app-capable" content="yes">		
+    <!-- Enables full-screen app-like behavior on mobile -->
+
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <!-- Enables PWA behavior on iOS Safari -->
 </head>
+
 <body>
 
-	<main>
-	
-	<nav>
-		<a href="../index.html">Home</a>
-	</nav>
-	
-	<script>
-	     if ("serviceWorker" in navigator) {
-	     navigator.serviceWorker.register("/service-worker.js")
-	    .then(() => console.log("Service Worker registered"))
-	    .catch(err => console.log("SW registration failed:", err));
-	     }
-     	</script>
+<main>
+<!-- Main content wrapper for semantic structure -->
 
-        <section>
-            <h2>About Me</h2>
+<nav>
+    <!-- Navigation section -->
 
-            <figure>
-                <img src="Profile_picture_edited.jpg" alt="Portrait of Omri Wolk" class="profile-img">
-                <figcaption>Profile image.</figcaption>
-            </figure>
+    <a href="../index.html">Home</a>
+    <!-- Link back to homepage -->
+</nav>
 
-		<p>Hello, my name is Omri Wolk.</p>
+<script>
+    // Checks if browser supports service workers (PWA feature)
+    if ("serviceWorker" in navigator) {
 
-		<p>
-		I am a pharmacist and an aspiring data scientist with a strong interest in 
-		computer-aided drug discovery (CADD).
-		</p>
+        // Registers service worker for offline caching + installability
+        navigator.serviceWorker.register("/service-worker.js")
 
-		<p>
-		I am developing my skills in PyTorch and AI principles to create predictive 
-		models that find the drug "niddles" in the molecular "haystack".
-		</p>
-		
-        </section>
+        // Logs success message in console
+        .then(() => console.log("Service Worker registered"))
 
-        <!-- Developer comment example:
-             This section could later be expanded with achievements or a short video introduction.
-        -->
+        // Logs error if registration fails
+        .catch(err => console.log("SW registration failed:", err));
+    }
+</script>
 
-        <section>
-            
-                <h2>Personal Qualities</h2>
-				 <figure>
-				<img src="CADD.jpg" alt=" ...">                
-				<figcaption>CADD - image from: J. Bajorath,  "Computer-aided drug  discovery" F1000Research, vol. 4, pp. 630, 2015, doi: 10.12688/f1000research.6653.1.</figcaption>
-                <p>
-                    I am an enthusiastic learner who takes pride in the quality of my work. I am meticulos on biological, chemical and computational aspects of CADD, and so I get results.
-                </p>
-                <p>
-                    I work well independently, but I am also comfortable collaborating with others. I value communication, patience, and persistence.
-                </p>
+<section>
+    <!-- About Me section -->
 
-                <h2>Career Goals</h2>
-                <img src="images/career-goals.jpg" alt="Notebook and laptop on a work desk">
-                <p>
-                    My goal is to develop the various computational tools that would put affordable drugs into patient's hands
-                </p>
-        </section>
+    <h2>About Me</h2>
+    <!-- Section heading -->
 
-        <section>
-            <h2>Contact Details</h2>
-			<img src="contact.png" alt="Contact" class="profile-img">
-            <address>
-                <p>Email: <a href="mailto:omriwolk@gmail.com">omriwolk@gmail.com</a></p>
-                <p>WhatsApp: <a href="https://wa.me/972544777163" target="_blank" rel="noopener noreferrer">+972 54 477 7163</a></p>
-		<p>LinkedIn: <a href="https://www.linkedin.com/in/omri-wolk-237b012a1" target="_blank">linkedin.com/in/omri-wolk</a></p>
-                <p>Location: Hanoi, Vietnam</p>
-            </address>
-        </section>
+    <figure>
+        <!-- Image with caption for accessibility -->
 
-    </main>
+        <img src="Profile_picture_edited.jpg" alt="Portrait of Omri Wolk" class="profile-img">
+        <!-- Profile image -->
 
-    <footer>
-        <p>&copy; 2026 Omri Wolk. All rights reserved.</p>
-    </footer>
+        <figcaption>Profile image.</figcaption>
+        <!-- Image description -->
+    </figure>
+
+    <p>Hello, my name is Omri Wolk.</p>
+    <!-- Intro line -->
+
+    <p>
+        I am a pharmacist and an aspiring data scientist with a strong interest in 
+        computer-aided drug discovery (CADD).
+    </p>
+
+    <p>
+        I am developing my skills in PyTorch and AI principles to create predictive 
+        models that find the drug "niddles" in the molecular "haystack".
+    </p>
+</section>
+
+<!-- Developer note for future expansion -->
+<!-- This section could later include achievements or video introduction -->
+
+<section>
+    <!-- Personal qualities section -->
+
+    <h2>Personal Qualities</h2>
+
+    <figure>
+        <!-- Image + caption block -->
+
+        <img src="CADD.jpg" alt=" ..." >
+        <!-- CADD-related image -->
+
+        <figcaption>
+            CADD - image from: J. Bajorath, "Computer-aided drug discovery" F1000Research, 2015.
+        </figcaption>
+    </figure>
+
+    <p>
+        I am an enthusiastic learner who takes pride in the quality of my work. I am meticulous 
+        on biological, chemical and computational aspects of CADD, and so I get results.
+    </p>
+
+    <p>
+        I work well independently, but I am also comfortable collaborating with others. I value 
+        communication, patience, and persistence.
+    </p>
+</section>
+
+<section>
+
+    <h2>Career Goals</h2>
+    <!-- Section heading -->
+    
+    <figure>
+    	<img src="target.jpg" alt="Career Goals" class="profile-img">
+    	<!-- Career goals image -->
+    </figure>
+
+    <p>
+        My goal is to develop computational tools that will put affordable drugs into patients' hands.
+    </p>
+</section>
+
+<section>
+    <!-- Contact section -->
+
+    <h2>Contact Details</h2>
+
+    <img src="contact.png" alt="Contact" class="profile-img">
+    <!-- Contact icon/image -->
+
+    <address>
+        <!-- Semantic contact information -->
+
+        <p>Email: <a href="mailto:omriwolk@gmail.com">omriwolk@gmail.com</a></p>
+        <!-- Email link -->
+
+        <p>WhatsApp: 
+            <a href="https://wa.me/972544777163" target="_blank" rel="noopener noreferrer">
+                +972 54 477 7163
+            </a>
+        </p>
+
+        <p>LinkedIn: 
+            <a href="https://www.linkedin.com/in/omri-wolk-237b012a1" target="_blank">
+                linkedin.com/in/omri-wolk
+            </a>
+        </p>
+
+        <p>Location: Hanoi, Vietnam</p>
+        <!-- Physical location -->
+    </address>
+</section>
+
+</main>
+
+<footer>
+    <!-- Page footer -->
+
+    <p>&copy; 2026 Omri Wolk. All rights reserved.</p>
+    <!-- Copyright notice -->
+</footer>
+
 </body>
 </html>
