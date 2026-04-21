@@ -21,8 +21,32 @@
 
 /* Animation applied to cards */
 .card {
-  animation: fadeIn 0.8s ease-in;
+  animation: fadeIn 2s ease-in;
 } /* Applies fade-in animation when elements load */
+
+/* Add smooth transitions to your existing .card */
+.card {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  /* Ensures scaling and shadow changes animate smoothly instead of jumping */
+}
+
+/* Desktop hover effect */
+.card:hover {
+  transform: scale(1.08);
+  /* Enlarges the card by 8% when the mouse hovers over it */
+
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+  /* Adds a soft shadow to make the card feel lifted */
+}
+
+/* Touchscreen / click effect */
+.card:active {
+  transform: scale(1.05);
+  /* Slightly enlarges (less than hover) to feel like a press interaction */
+
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+  /* Smaller shadow to match the "pressed" feel */
+}
 
 /* simple keyframe animation */
 @keyframes fadeIn {
