@@ -53,6 +53,17 @@ img {
   border-radius: 6px;
 } /* Makes images responsive and slightly rounded */
 
+figure {
+  margin-bottom: 1.5rem;
+}
+
+figcaption {
+  margin-top: 8px;   /* space between image and caption */
+  margin-bottom: 10px; /* space between caption and text below */
+  font-size: 0.9rem;
+  color: #555;
+}
+
 .profile-img {
   width: 180px;
   height: auto;
